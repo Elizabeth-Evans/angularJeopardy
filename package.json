@@ -1,0 +1,30 @@
+{
+  "name": "ang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch & ./node_modules/.bin/serve",
+    "bundle": "./node_modules/.bin/browserify --entry app.module.js -o bundle.js",
+    "watch": "./node_modules/.bin/watchify --entry app.module.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elizabeth-Evans/angularJeopardy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elizabeth-Evans/angularJeopardy/issues"
+  },
+  "homepage": "https://github.com/Elizabeth-Evans/angularJeopardy#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "serve": "^1.4.0",
+    "watchify": "^3.7.0"
+  }
+}
