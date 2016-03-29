@@ -2,7 +2,10 @@ var angular = require('angular');
 var angularRoute = require('angular-route');
 
 angular
-  .module('jeopardyapp',['ngRoute', 'jeopardy'])
+  .module('jeopardyapp',[
+    'ngRoute',
+    'jeopardy'
+  ])
   .config(function($routeProvider) {
     $routeProvider
       .when('/',{
@@ -14,8 +17,7 @@ angular
       //   controller: "QuestionController"
       // })
       .when('/404',{
-        template: '<h1> You messed up, loser </h1>',
-        controller: 'WangController'
+        template: '<h1> You messed up, loser </h1>'
       })
       .otherwise({
          redirectTo: '/404'

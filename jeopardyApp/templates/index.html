@@ -4,13 +4,18 @@
 
  </div>
 </div>
-
+<div>
+  <h4>Score:{{score}}</h4>
+</div>
 
 <div class= 'col-md-2'ng-repeat="category in categories " class="">
- <p>
+<jeopardy-reader question=category.data></jeopardy-reader>
+
+
+ <!-- <p>
    Category: {{ category.data.title }}
- </p>
-<a href="/#/question"><button class='warning btn'>
+ </p> -->
+<!-- <a href="/#/question"><button class='warning btn'>
 <jeopardy-reader question=category.data.clues[0]></jeopardy-reader>
 </button></a>
 <a href="/#/question"><button class='warning btn'>
@@ -24,7 +29,7 @@
 </button></a>
 <a href="/#/question"><button class='warning btn'>
 <jeopardy-reader question=category.data.clues[4]></jeopardy-reader>
-</button></a>
+</button></a> -->
 
 
 

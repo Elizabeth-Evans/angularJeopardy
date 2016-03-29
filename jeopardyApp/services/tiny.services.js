@@ -1,7 +1,10 @@
-// angular
-//   .module('jeopardy')
-//   .service('TinyService',function($http) {
-//     var url = "https://tiny-tiny.herokuapp.com/collections/etsycart";
+angular
+  .module('jeopardy')
+  .service('cacheEngine',function($cacheFactory) {
+    return $cacheFactory('ApiService');
+
+  });  
+    // var url = "https://tiny-tiny.herokuapp.com/collections/etsycart";
 
     // function getBag() {
     //   return $http.get(url)

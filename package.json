@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/Elizabeth-Evans/angularJeopardy#readme",
   "dependencies": {
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.2",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "browserify": "^13.0.0",

@@ -1,13 +1,13 @@
 angular
   .module('jeopardy')
-  .service('ApiService', function($http, $q){
+  .service('ApiService', function($http, $q, $cacheFactory){
     // var categoryOne = 'category?id=7580';
     // var categoryTwo = 'category?id=10181';
     // var categoryThree = 'category?id=11534';
     // var categoryFour = 'category?id=752';
     // var categoryFive = 'category?id=365';
     // var categorySix = 'category?id=11538';
-
+    var cacheEngine = $cacheFactory('jeopardy');
     var url = 'http://jservice.io/api/category?id=';
 
     function getCategories(){
@@ -19,7 +19,7 @@ angular
       return defer.promise;
     }
 
-    function sixThenShits() {
+    function getData() {
       return $q.all([getCategories(),getCategories(),getCategories(),getCategories(),getCategories(),getCategories()])
     }
 
@@ -62,6 +62,6 @@ angular
       // getCategoryFive: getCategoryFive,
       // getCategorySix: getCategorySix,
       getCategories: getCategories,
-      sixThenShits: sixThenShits
+      getData: getData
     }
   })
